@@ -1,0 +1,451 @@
+/* ============================================
+   MEDIA QUERIES FOR RESPONSIVE DESIGN
+   1987 News - Responsive Styles
+   ============================================ */
+
+/* ============================================
+   TABLET DEVICES (768px - 1024px)
+   ============================================ */
+@media screen and (max-width: 1024px) {
+    /* Header */
+    .header-ul {
+        left: 200px;
+        top: 35px;
+    }
+    
+    .ul-li {
+        margin-right: 15px;
+    }
+    
+    a {
+        font-size: 16px;
+        padding: 8px;
+    }
+    
+    /* Main Section */
+    .section-main {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+    
+    .section-main__title {
+        font-size: 56px;
+    }
+    
+    .section-main__text {
+        font-size: 36px;
+        width: 90%;
+        max-width: 800px;
+        padding-top: 50px;
+        margin: 0 auto;
+    }
+    
+    .section-main__aside-img {
+        right: -600px;
+        top: -400px;
+        max-width: 400px;
+    }
+    
+    /* News Section */
+    .section-daynews__title {
+        font-size: 56px;
+    }
+    
+    /* Footer */
+    .footer-contacts__ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+/* ============================================
+   MOBILE DEVICES - Large (481px - 767px)
+   ============================================ */
+@media screen and (max-width: 767px) {
+    /* Global */
+    html {
+        font-size: 14px;
+    }
+    
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    /* Header */
+    header {
+        height: 80px;
+        position: relative;
+        padding: 0 15px;
+    }
+    
+    .header-logotype {
+        width: 150px;
+        height: 75px;
+        position: relative;
+        z-index: 100;
+    }
+    
+    /* Hamburger Menu */
+    .header-ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: #fff;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 100px 20px 20px;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease-in-out;
+        left: auto;
+        z-index: 99;
+    }
+    
+    .header-ul.active {
+        right: 0;
+    }
+    
+    .ul-li {
+        margin: 15px 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .ul-li a {
+        font-size: 20px;
+        padding: 15px;
+        display: block;
+        width: 100%;
+    }
+    
+    /* Hamburger Button */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        position: fixed;
+        top: 27px;
+        right: 20px;
+        z-index: 100;
+    }
+    
+    .hamburger-line {
+        width: 100%;
+        height: 3px;
+        background-color: #000;
+        border-radius: 3px;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .hamburger.active .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+    
+    .hamburger.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+    
+    /* Overlay */
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 98;
+    }
+    
+    .overlay.active {
+        display: block;
+    }
+    
+    /* Main Section */
+    .section-main {
+        width: 100%;
+        padding: 15px;
+        height: auto;
+    }
+    
+    .section-main__title {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+    
+    .section-main__text {
+        font-size: 24px;
+        width: 100%;
+        padding-top: 30px;
+        line-height: 1.4;
+    }
+    
+    .section-main__aside-img {
+        position: relative;
+        right: 0;
+        top: 0;
+        width: 100%;
+        max-width: 300px;
+        margin: 30px auto 0;
+        display: block;
+    }
+    
+    /* HR Section */
+    .section-hr {
+        padding: 15px;
+    }
+    
+    /* News Section */
+    .section-daynews {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .section-daynews__title {
+        font-size: 40px;
+    }
+    
+    /* Footer */
+    .footer-contacts {
+        margin-bottom: 30px;
+        height: auto;
+    }
+    
+    .footer-contacts__title {
+        font-size: 20px;
+    }
+    
+    .footer-contacts__text {
+        font-size: 16px;
+    }
+    
+    .footer-contacts__ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* ============================================
+   MOBILE DEVICES - Small (320px - 480px)
+   ============================================ */
+@media screen and (max-width: 480px) {
+    /* Global */
+    html {
+        font-size: 13px;
+    }
+    
+    body {
+        width: 100%;
+        min-width: 320px;
+    }
+    
+    /* Header */
+    header {
+        height: 70px;
+        padding: 0 10px;
+    }
+    
+    .header-logotype {
+        width: 120px;
+        height: 60px;
+    }
+    
+    .hamburger {
+        top: 22px;
+        right: 15px;
+    }
+    
+    .header-ul {
+        width: 80%;
+        padding: 90px 15px 15px;
+    }
+    
+    .ul-li a {
+        font-size: 18px;
+        padding: 12px;
+    }
+    
+    /* Main Section */
+    .section-main {
+        padding: 10px;
+    }
+    
+    .section-main__title {
+        font-size: 32px;
+    }
+    
+    .section-main__text {
+        font-size: 18px;
+        padding-top: 20px;
+        line-height: 1.5;
+    }
+    
+    .section-main__aside-img {
+        max-width: 200px;
+        margin: 20px auto 0;
+    }
+    
+    /* HR Section */
+    .section-hr {
+        padding: 10px;
+    }
+    
+    .section-hr__line {
+        height: 2px;
+    }
+    
+    /* News Section */
+    .section-daynews {
+        padding: 10px;
+    }
+    
+    .section-daynews__title {
+        font-size: 32px;
+    }
+    
+    /* Footer */
+    .footer-contacts__title {
+        font-size: 18px;
+    }
+    
+    .footer-contacts__text {
+        font-size: 14px;
+    }
+    
+    .footer-contacts__li .spon {
+        font-size: 16px;
+    }
+}
+
+/* ============================================
+   EXTRA SMALL DEVICES (max 320px)
+   ============================================ */
+@media screen and (max-width: 320px) {
+    html {
+        font-size: 12px;
+    }
+    
+    .section-main__title {
+        font-size: 28px;
+    }
+    
+    .section-main__text {
+        font-size: 16px;
+    }
+    
+    .section-daynews__title {
+        font-size: 28px;
+    }
+    
+    .header-logotype {
+        width: 100px;
+        height: 50px;
+    }
+}
+
+/* ============================================
+   LARGE SCREENS (1920px and above)
+   ============================================ */
+@media screen and (min-width: 1920px) {
+    .section-main {
+        max-width: 2560px;
+        margin: 0 auto;
+    }
+    
+    .section-main__title {
+        font-size: 96px;
+    }
+    
+    .section-main__text {
+        font-size: 64px;
+        max-width: 1400px;
+    }
+    
+    .section-daynews__title {
+        font-size: 96px;
+    }
+}
+
+/* ============================================
+   LANDSCAPE ORIENTATION (Mobile)
+   ============================================ */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .header-ul {
+        width: 50%;
+        padding: 90px 15px 15px;
+    }
+    
+    .ul-li {
+        margin: 8px 0;
+    }
+    
+    .section-main__text {
+        padding-top: 20px;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+    header,
+    .section-hr,
+    .footer-contacts {
+        display: none;
+    }
+    
+    .section-main {
+        width: 100%;
+        height: auto;
+    }
+    
+    .section-main__title,
+    .section-main__text {
+        color: #000;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY - Reduced Motion
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ============================================
+   UTILITY CLASSES FOR MOBILE
+   ============================================ */
+.text-red,
+.text-green,
+.text-blue {
+    display: inline;
+}
+
+@media screen and (max-width: 767px) {
+    .text-red,
+    .text-green,
+    .text-blue {
+        display: block;
+    }
+}
