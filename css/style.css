@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* @ styles */
+
+@font-face {
+    font-family: 'RM';
+    src: url('../fonts/RobotoMono.ttf');
+}
+
+@font-face {
+    font-family: 'MS';
+    src: url('../fonts/Montserrat.ttf');
+}
+
+@font-face {
+    font-family: 'UBN';
+    src: url('../fonts/Ubuntu.ttf');
+}
+
+/* HTML Tag Styles */
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #fff;
+    height: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'MS';
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    position: absolute;
+}
+
+hr {
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* Header Styles */
+
+.header-ul {
+    display: flex;
+    justify-content: space-between;
+    left: 500px;
+    top: 40px;
+}
+
+.ul-li {
+    transition: 0.3s;
+    margin-right: 20px;
+}
+
+.ul-li:hover {
+    transform: scale(120%);
+    a {
+        color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.header-logotype {
+    width: 200px;
+    height: 100px;
+}
+
+/* HR Styles */
+
+.section-hr {
+    background-color: #fff;
+    height: 50px;
+    padding: 23.5px;
+}
+
+.section-hr__line {
+    height: 3px;
+    width: 90%;
+    margin: 0 auto;
+    background-image: 
+        linear-gradient(90deg, 
+            transparent 0%, 
+            red 10%, 
+            green 50%, 
+            blue 90%, 
+            transparent 100%
+        );
+    filter: blur(0.5px);
+    animation: line 2s infinite;
+}
+
+/* Main Styles */
+
+.section-main {
+    width: 1920px;
+    height: 800px;
+    padding: 20px;
+}
+
+.section-main__title {
+    font-family: 'UBN';
+    font-size: 72px;
+    color: #000;
+    text-align: center;
+    font-weight: 700;
+    line-height: auto;
+    margin-bottom: 20px;
+}
+
+.section-main__text {
+    font-family: 'UBN';
+    font-size: 48px;
+    color: #000;
+    text-align: center;
+    line-height: auto;
+    font-weight: 400;
+    width: 1000px;
+    height: auto;
+    padding-top: 100px;
+}
+
+.section-main__aside-img {
+    position: relative;
+    right: -1000px;
+    top: -550px;
+}
+
+.text-red {
+    color: red;
+}
+
+.text-green {
+    color: green;
+}
+
+.text-blue {
+    color: blue;
+}
+
+/* Section News Styles */
+
+.section-daynews {
+    width: auto;
+    height: auto;
+}
+
+.section-daynews__title {
+    font-family: 'RM';
+    font-size: 72px;
+    color: #000;
+    text-align: center;
+    font-weight: 700;
+    line-height: auto;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* News Styles (Everyday new) */
+
+.articles {
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.article-title {
+    font-family: 'RM';
+    text-align: center;
+    font-size: 48px;
+    color: #000;
+    line-height: auto;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.article-text {
+    font-family: 'MS';
+    text-align: center;
+    font-size: 24px;
+    color: #000;
+    line-height: auto;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.article-link {
+    font-size: 24px;
+    color: coral;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #f8f9fa;
+    padding: 60px 20px 30px;
+    margin-top: 50px;
+}
+
+.footer__container {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/* Градиентная линия */
+.footer__line {
+    height: 3px;
+    width: 90%;
+    margin: 0 auto 40px;
+    background-image: linear-gradient(90deg,
+        transparent 0%,
+        red 10%,
+        green 50%,
+        blue 90%,
+        transparent 100%
+    );
+    filter: blur(0.5px);
+}
+
+/* Основная секция - ИСПРАВЛЕНИЕ БАЛАНСА */
+.footer__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+    height: 150px;
+}
+
+/* Левая колонка - делаем текст заметнее */
+.footer__brand {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer__brand-text {
+    font-family: 'UBN';
+    font-size: 48px;  /* Увеличили размер */
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+}
+
+/* Центральная и правая колонки - равные пропорции */
+.footer__contacts,
+.footer__nav {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+/* Заголовки секций */
+.footer__title {
+    font-family: 'UBN';
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.footer__title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, red, green, blue);
+}
+
+/* Списки */
+.footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.footer__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-family: 'UBN';
+    font-size: 18px;
+}
+
+.footer__icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.footer__item:hover .footer__icon {
+    transform: scale(1.2);
+}
+
+.footer__link {
+    font-family: 'MS';
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    transition: all 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.footer__link:hover {
+    color: #fff;
+    background: linear-gradient(90deg, red, green, blue);
+    transform: translateY(-2px);
+}
+
+/* Навигация */
+.footer__nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.footer__nav-list li {
+    margin-bottom: 10px;
+}
+
+.footer__nav-link {
+    font-family: 'MS';
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.footer__nav-link:hover {
+    color: #fff;
+    background: linear-gradient(90deg, red, green, blue);
+    border-radius: 5px;
+}
+
+/* Нижняя секция */
+.footer__bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer__copyright {
+    font-family: 'UBN';
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.footer__made {
+    font-family: 'UBN';
+    font-size: 14px;
+    color: #888;
+}
+
+.footer__made .heart {
+    color: red;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .footer__main {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer__brand {
+        align-items: center;
+    }
+    
+    .footer__brand-text {
+        font-size: 36px;
+    }
+}
